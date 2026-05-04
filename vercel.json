@@ -1,0 +1,5 @@
+{
+  "env": {
+    "NEXT_PUBLIC_INFERENCE_API": "@next_public_inference_api"
+  }
+}
