@@ -27,7 +27,7 @@ interface WaveformData {
   duration: number;
 }
 
-const API_URL = process.env.INFERENCE_URL || "http://localhost:8000/";
+const INFERENCE_API = process.env.INFERENCE_URL || "http://localhost:8000/";
 interface ApiResponse {
   predictions: Prediction[];
   visualization: VisualizationData;
@@ -140,7 +140,7 @@ export default function HomePage() {
           ),
         );
 
-        const response = await fetch(API_URL, {
+        const response = await fetch(INFERENCE_API, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ audio_data: base64String }),
