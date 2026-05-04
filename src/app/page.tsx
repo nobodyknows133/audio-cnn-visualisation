@@ -27,7 +27,7 @@ interface WaveformData {
   duration: number;
 }
 
-const INFERENCE_API = process.env.INFERENCE_URL || "http://localhost:8000/";
+const INFERENCE_API = process.env.NEXT_INFERENCE_API || "http://localhost:8000/";
 interface ApiResponse {
   predictions: Prediction[];
   visualization: VisualizationData;
